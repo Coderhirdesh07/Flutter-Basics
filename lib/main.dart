@@ -1,6 +1,8 @@
+// 
 import 'package:flutter/material.dart';
-import 'package:flutter_practise/page/firstpage.dart';
-import 'package:flutter_practise/page/secondpage.dart';
+import 'package:flutter_practise/page/home_page.dart';
+// import 'package:flutter_practise/page/firstpage.dart';
+// import 'package:flutter_practise/page/secondpage.dart';
 
 void main(){
   runApp(MyApp());
@@ -12,10 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Firstpage(),
-      routes: {
-        "/secondpage":(context) => SecondPage()
-      },
+      home:HomePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.yellow
+      ),
+      
     );
   }
 }
