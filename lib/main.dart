@@ -1,11 +1,15 @@
 // 
 import 'package:flutter/material.dart';
 import 'package:flutter_practise/page/home_page.dart';
+import "package:hive_flutter/hive_flutter.dart";
 // import 'package:flutter_practise/page/firstpage.dart';
 // import 'package:flutter_practise/page/secondpage.dart';
 
-void main(){
-  runApp(MyApp());
+void main() async{
+  await Hive.initFlutter();
+  var box = await Hive.openBox("my_box");
+
+  runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "../component/todo.dart";
 import '../component/dialog.dart';
+import "package:hive_flutter/hive_flutter.dart";
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,6 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final _controller = TextEditingController();
+  final box = Hive.openBox("my_box");
   List todoList = [
     ["Make Tutorial",false],
     ["Do Excersice",false]

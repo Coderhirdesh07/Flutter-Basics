@@ -6,8 +6,9 @@ class ToDoList extends StatelessWidget {
   final bool taskCompleted;
 
   Function(bool?)? onChanged;
+  Function(BuildContext)? deleteFunction;
   ToDoList({super.key,
-  required this.taskName,required this.taskCompleted,required this.onChanged});
+  required this.taskName,required this.taskCompleted,required this.onChanged,required this.deleteFunction});
 
   @override
   Widget build(BuildContext context) {
