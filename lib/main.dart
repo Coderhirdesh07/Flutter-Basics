@@ -1,9 +1,7 @@
-// 
 import 'package:flutter/material.dart';
 import 'package:flutter_practise/page/home_page.dart';
 import "package:hive_flutter/hive_flutter.dart";
-// import 'package:flutter_practise/page/firstpage.dart';
-// import 'package:flutter_practise/page/secondpage.dart';
+
 
 void main() async{
   await Hive.initFlutter();
